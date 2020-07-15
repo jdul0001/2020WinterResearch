@@ -1,0 +1,13 @@
+# MacOS files
+.DS_Store
+*.log
+
+# Demo files and demo images
+*.bmp
+*.pgm
+demo.m
+demo1.m
+example1.m
+example12.m
+example12.m*
+example2.m
