@@ -36,12 +36,15 @@ textureSection = cell(3,3); % Synthesised textures as a 3x3 cell array
 % Specified directory where textures will be saved to, relative to current
 % folder
 directory = 'textureSamples/';  
-
-% Loop through each image found in 
+tic
+% Loop through each image found in specified directory
 for currentImage = imageFiles'
+    fprintf('\n\n\n\n\n-------- Synthesising textures for image: %s --------\n',currentImage.name);
+    
     % Image read and constraints
     im0 = imread(currentImage.name);
 
+    
     [height, width, ~] = size(im0);
 
      % Determining crop dimensions as a multiple of cropLimit
@@ -93,3 +96,5 @@ for currentImage = imageFiles'
     end
 end
 close all
+fprintf('\n\n\n\n\n-------- Texture Synthesis Complete --------\n');
+toc
