@@ -98,7 +98,7 @@ for currentImage = imageFiles'
     imageWhole = cat(1,temprows{1},temprows{2},temprows{3});
 
     % Writing cropped images to folder
-    imageName = strcat(currentImage.name(1:end-4),'_texture.jpg');
+    imageName = strcat('imtexture',currentImage.name(3:end));
     imwrite(imageWhole,strcat(directory,imageName));
 end
 close all
